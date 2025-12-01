@@ -133,7 +133,7 @@
 
     // URL base do seu n8n (sem barra no final)
     // Exemplo: "https://n8n.seudominio.com" ou "https://seu-servidor.com/n8n"
-    const N8N_BASE_URL = "https://SEU_N8N";
+    const N8N_BASE_URL = "https://workflows.rnztech.com";
 
     // Endpoint do proxy de kanban no n8n (Workflow: Trello Proxy Kanban)
     const PROXY_ENDPOINT = "/webhook/trello/proxy";
@@ -154,7 +154,7 @@
       if (contactName) params.set("contactName", contactName);
 
       // Gera algo como:
-      // https://SEU_N8N/webhook/trello/proxy?queue=default&conversationId=123&contactName=Joao
+      // https://workflows.rnztech.com/webhook/trello/proxy?queue=default&conversationId=123&contactName=Joao
       return N8N_BASE_URL.replace(/\/$/, "") + PROXY_ENDPOINT + "?" + params.toString();
     }
 
